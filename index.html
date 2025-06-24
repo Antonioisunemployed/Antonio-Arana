@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antonio Jago Arana Barbachan - Perfil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Poppins', sans-serif; /* Fuente limpia y moderna */
+            margin: 0;
+            padding: 0;
+            background-color: #E0F7FA; /* Un azul cian muy claro para el fondo */
+            color: #333;
+            line-height: 1.8; /* Mayor espacio entre líneas para mejor lectura */
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 950px; /* Un poco más ancho */
+            margin: 25px auto;
+            padding: 30px;
+            background-color: #FFFFFF;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+            border-radius: 15px; /* Bordes más redondeados */
+            overflow: hidden; /* Para contener los elementos flotantes si los hubiera */
+        }
+
+        /* Barra de navegación */
+        .navbar {
+            background-color: #4CAF50; /* Verde vibrante para la barra de navegación */
+            padding: 12px 0;
+            text-align: center;
+            border-radius: 15px 15px 0 0;
+            margin-bottom: 35px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para la barra */
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .navbar ul li {
+            margin: 0 20px;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600; /* Más negrita */
+            padding: 10px 20px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            border-radius: 25px; /* Más redondeado */
+            display: block;
+            text-transform: uppercase; /* Mayúsculas para la navegación */
+            letter-spacing: 0.5px;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #388E3C; /* Verde más oscuro al pasar el ratón */
+            transform: translateY(-3px) scale(1.05); /* Efecto de elevación y zoom */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Título principal (tu nombre) */
+        h1 {
+            font-family: 'Montserrat', sans-serif; /* Fuente fuerte y moderna */
+            font-size: 4.5em; /* Muy grande */
+            color: #3F51B5; /* Un azul índigo profundo y llamativo */
+            text-align: center;
+            margin-bottom: 50px;
+            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25); /* Sombra más definida */
+            letter-spacing: 2px; /* Espaciado entre letras */
+            text-transform: uppercase; /* Mayúsculas para tu nombre */
+            line-height: 1.1;
+        }
+
+        /* Secciones de contenido */
+        section {
+            margin-bottom: 60px;
+            padding: 30px;
+            border-bottom: 2px solid #EEE; /* Separador más notorio */
+            background-color: #F8F9FA; /* Un gris muy claro para las secciones */
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra suave para las secciones */
+        }
+
+        section:last-child {
+            border-bottom: none;
+            margin-bottom: 20px; /* Menos margen al final */
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #FFC107; /* Amarillo ámbar, muy llamativo para los títulos de sección */
+            border-bottom: 4px solid #FFC107;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            font-size: 2.2em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center; /* Títulos de sección centrados */
+        }
+
+        h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #673AB7; /* Un púrpura profundo para los subtítulos */
+            margin-top: 35px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            border-bottom: 1px solid #D1C4E9; /* Línea sutil bajo los subtítulos */
+            padding-bottom: 5px;
+        }
+
+        /* Listas y enlaces */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 15px;
+            line-height: 1.6;
+            font-size: 1.1em;
+        }
+
+        a {
+            color: #2196F3; /* Azul eléctrico para los enlaces */
+            text-decoration: none;
+            transition: color 0.3s ease, text-decoration 0.3s ease;
+            font-weight: 600; /* Enlaces más prominentes */
+        }
+
+        a:hover {
+            color: #0D47A1; /* Azul oscuro al pasar el ratón */
+            text-decoration: underline;
+        }
+
+        /* Estilo para los ítems de curso y amigo */
+        .course-item, .friend-item {
+            background-color: #E8F5E9; /* Verde claro muy sutil para ítems */
+            padding: 15px 25px;
+            border-left: 8px solid #8BC34A; /* Un verde lima para el borde lateral */
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            margin-bottom: 15px;
+            display: flex; /* Para mejor alineación del contenido */
+            align-items: center;
+        }
+
+        .course-item:last-child, .friend-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+            font-size: 1.2em; /* Texto de contacto más grande */
+            font-weight: 500;
+        }
+
+        .contact-info a {
+            font-weight: 700; /* Enlaces de contacto más bold */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <ul>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#mis-cursos">Mis cursos</a></li>
+                <li><a href="#mis-amigos">Mis amigos</a></li>
+                <li><a href="#donde-encontrarme">Dónde encontrarme</a></li>
+            </ul>
+        </nav>
+
+        <h1>Antonio Jago Arana Barbachan</h1>
+
+        ---
+
+        <section id="sobre-mi">
+            <h2>Sobre mí</h2>
+            <p>Hola, soy estudiante de “<a href="https://ucsp.edu.pe/carreras/administracion-negocios/" target="_blank">Administración de Negocios</a>” cursando el tercer semestre en la “<a href="https://ucsp.edu.pe/" target="_blank">Universidad Católica San Pablo</a>” o Sanpa, como algunos de mis compañeros le dicen. Me considero una persona reservada pero muy sociable, me gusta hacer amigos y bromear. Podría calificar mi experiencia en esta universidad como muy satisfactoria, porque todos los días se aprende algo nuevo.</p>
+        </section>
+
+        ---
+
+        <section id="mis-cursos">
+            <h2>Los cursos que llevo</h2>
+
+            <h3>Profesores actuales:</h3>
+            <ul>
+                <li class="course-item">Análisis Financiero: <a href="https://www.linkedin.com/in/mar%C3%ADa-bel%C3%A9n-bocchio-linares-96846035" target="_blank">Profesora Maria Bocchio</a></li>
+                <li class="course-item">Calculo en una variable: Profesora Maribel Quiroz</li>
+                <li class="course-item">Comportamiento del consumidor: <a href="https://www.linkedin.com/in/fabiola-postigo-99996b3b?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAiB0cUBu4J33hYx0Nby9LY-AEwA2XwGHNg&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3B9jkEurKPTZSir9hTlNdfPw%3D%3D" target="_blank">Profesora Fabiola Postigo</a></li>
+                <li class="course-item">Filosofia de la Naturaleza: <a href="https://www.linkedin.com/in/isabelmoralesb" target="_blank">Profesora Isabel Morales</a></li>
+                <li class="course-item">Historia del Occidente: <a href="https://www.linkedin.com/in/amparo-isela-chalco-ch%C3%A1vez-8185512aa/" target="_blank">Profesora Amparo Chalco</a></li>
+                <li class="course-item">Introducción de Ciencia de la Computación: <a href="https://www.linkedin.com/in/ecuadrosv/" target="_blank">Profesor Ernesto Cuadros</a></li>
+                <li class="course-item">Liderazgo: <a href="https://pe.linkedin.com/in/pablo-nu%C3%B1ez-saija-08b892174" target="_blank">Profesor Pablo Nuñez</a></li>
+            </ul>
+
+            <h3>Algunos profesores de semestres pasados:</h3>
+            <ul>
+                <li class="course-item">Comunicacion I y II: Profesor Edgar Celso Mayhua Choque</li>
+                <li class="course-item">Economía General: <a href="https://www.linkedin.com/in/karlolam?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">Profesor Karlo Lam Obregon</a></li>
+                <li class="course-item">Fundamentos de Marketing: <a href="https://www.linkedin.com/in/ana-elizabeth-g%C3%B3mez-burns-4502263b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">Profesora Ana Gomez Burns</a></li>
+                <li class="course-item">Contabilidad para administradores: Profesor Hector Manuel Castro Salinas</li>
+            </ul>
+        </section>
+
+        ---
+
+        <section id="mis-amigos">
+            <h2>Mis amigos de la universidad</h2>
+            <ul>
+                <li class="friend-item"><a href="https://greciameza.github.io/Grecia-Meza-page/" target="_blank">Grecia Meza Caballero</a></li>
+                <li class="friend-item"><a href="https://lindsay051206.github.io/Lindsay-Alanna-Perochena-Obreg-n/" target="_blank">Lindsay Perochena Obregon</a></li>
+                <li class="friend-item"><a href="https://alejandragarcia10.github.io/Alejandra-Garc-a-Apaza/" target="_blank">Alejandra García</a></li>
+                <li class="friend-item"><a href="https://vaniabusta10.github.io" target="_blank">Vania Bustamante</a></li>
+                <li class="friend-item"><a href="https://sam061006.github.io/Samantha-M-a-Johnson-N-ez/" target="_blank">Samantha Johnson Nuñez</a></li>
+                <li class="friend-item">Fátima Cruz Talavera</li>
+            </ul>
+        </section>
+
+        ---
+
+        <section id="donde-encontrarme">
+            <h2>Dónde encontrarme</h2>
+            <div class="contact-info">
+                <p>Github: <a href="https://github.com/Antonioisunemployed" target="_blank">Antonioisunemployed</a></p>
+                <p>Linkedin: <a href="https://www.linkedin.com/in/antonio-jago-arana-barbachan-613b12370/" target="_blank">Antonio Jago Arana Barbachan</a></p>
+                <p>Correo electrónico: <a href="mailto:antonio.arana@ucsp.edu.pe">antonio.arana@ucsp.edu.pe</a></p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
